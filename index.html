@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">         
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
@@ -14,130 +15,183 @@
     .attribution a { color: hsl(228, 45%, 44%); }
     body {
       background-color: hsl(0, 0%, 100%);
+      place-items: center; 
     }
-    .little-card {
-      height: 3355px; 
-      width: 3355px; 
-    }
-    .purple-square, .white-square {
-      height: 2400px; 
-      width: 2400px; 
+    .results grid-flow, .grid-flow {
+      height: 956px; 
+      width: 956px; 
       border-radius: 24px;
       padding: 24px;  
     }
-    .purple-square {
+    .results grid-flow {
       background-color: hsla(256, 72%, 46%, 1); 
+      height: 956px; 
+      width: 956px; 
     }
-    .white-square {
-      background-color: hsl(0, 0%, 100%);
+    .grid-flow1 {
+      background-color: hsla(256, 72%, 46%, 1); 
+      height: 956px; 
+      width: 956px; 
+      border-radius: 24px; 
+      padding: 24px; 
+      margin-bottom: 550px; 
+      margin-left: 245px; 
+      margin-top: -416px; 
     }
-    h1, h4 {
+    h1 {
       text-align: center; 
-      color: hsl(252, 100%, 67%);
+      color: hsla(256, 72%, 46%, 1); 
     } 
     .button {
-      background-color: hsla(241, 72%, 46%, 0); 
+      background-color:  hsl(0, 0%, 100%); 
       border-radius: 50%; 
       height: 266px; 
       width: 545px; 
+      margin-top: -5555px; 
+      color: var(--clr-neutral-100); 
+      line-height: 1; 
+      background: hsl(224, 30%, 27%); 
+      padding: 1rem 2rem; 
+      border: 0; 
+      border-radius: 100vw; 
+      cursor: pointer; 
+      margin-bottom: 55px; 
     }
-    .circle {
-      width: 424px; 
-      height: 424px; 
+    .result-score {  /* this is the background purple circle */
+      background: hsl(241, 44%, 51%); 
+      width: 500px; 
+      height: 500px; 
       border-radius: 50%; 
-      background: hsl(241, 81%, 54%); 
-      margin-left: 1016px; 
-    }
-    h2, h3, p {
-      color: hsl(0, 0%, 100%); 
+      margin-left: 300px; 
     }
     h3 {
-      font-size: 96px; 
-      margin-bottom: 65px; 
-      margin-top: 65px; 
+      font-size: 18px; 
       text-align: center; 
-      margin-top: 55px; 
-    }
-    h4 {
-      font-size: 24px; 
-      margin-right: 2400px; 
-      margin-left: 169px; 
-      margin-top: 60px; 
-      margin-bottom: 16px; 
-      opacity: 1.0; 
     }
     h2 {
-      margin-left: 1166px; 
-    }
-    p, h6 {
       font-size: 18px; 
-    }
-    h5 {
-      font-size: 24px; 
-      margin-left: 16px; 
-    }
-    h6 {
-      margin-left: 245px; 
-      margin-top: -65px; 
     }
     h1 { 
       margin-top: 16px; 
       opacity: 1.0; 
     } 
-    .white-rectangle { 
-      height: 155px; 
-      width: 245px; 
-      opacity: 1.0; 
-    } 
     p {
-      margin-left: 1045px;
+      font-size: 18px; 
     }
-    .summary {
-      margin-left: 16px; 
+    .number76-100 {
+      font-size: 50px; 
+      margin-top: 200px; 
+      margin-left: 200px; 
+      text-align: center; 
+      font-weight: 800;
+      margin-bottom: 12px; 
+    }
+    .number-100 {
+      font-size: 20px; 
+      margin-top: -450px; 
+      margin-left: 500px; 
+      margin-bottom: 55px; 
+    }
+    .purple-square { 
+      background-color: hsla(256, 72%, 46%, 1);   
+    } 
+    .white-square { 
+      background-color: hsl(0, 0%, 100%); 
+    } 
+    .purple-square, .white-square {
+      height: 2016px; 
+      width: 2016px; 
+      border-radius: 24px; 
+      padding: 24px; 
+    }
+    .flex-group {
+      float: left; 
+    }
+    .summary-score {
+      float: right; 
+      display: block; 
+    }
+    .button:hover, .button:focus-visible {
+      background: var(--gradient-primary); 
+    }
+    .section-title1 {
+      background-color: hsl(252, 100%, 67%);
+      color: hsl(0, 0%, 100%); 
+    } 
+    .summary grid-flow {
+      background-color: hsl(0, 0%, 100%); 
+      color: hsl(0, 0%, 100%); 
+    }
+    .section-title2 {
+      background-color: hsl(0, 0%, 100%); 
+      color: hsl(0, 0%, 100%); 
+    }
+    .grid-flow2, .summary-item, summary-score, flex-group, summary-item {
+      background-color: hsl(0, 0%, 100%); 
+    }
+    .results grid-flow[data-spacing="large"] {
+      gap: 2rem; 
+    }
+    .results grid-flow, grid-flow1, summary grid-flow[data-spacing="large"], grid-flow2 {
+      display: grid; 
+      align-content: start; 
+      gap: 1rem;  
+    }
+    .section-title1, .section-title2 { 
+      font-weight: var(--fw-bold); 
+      font-size: var(--fs-600); 
+    } 
+    .result-rank {
+      margin-left: 245px; 
     }
   </style>
 </head>
 <body>
-<div class="little-card">
   <div class="purple-square">
-    <h1>Your Result</h1>
-    <div class="circle">
-    <h3>76</h3>
-    <br/>
-    <h4>of 100</h4>
-    </div>
-  <h2>Great</h2>
-  <p>You scored higher than 65% of the</p>
-  <br/>
-  <p>people who have taken these tests.</p>
+    <div class="results grid-flow" data-spacing="large">
+    <h1 class="section-title1">
+      Your Result
+    </h1>
+
+    <p class="result-score">
+      <span style="color: hsl(0, 0%, 100%);" class="number76-100">76</span></p><p class="number-100"><span style="color: hsl(0, 0%, 100%);">of 100</span></p>
   </div>
-
-  <div class="white-square">
-    <div class="white-rectangle">
-  <h4 class="summary"><span style="color: hsl(224, 30%, 27%);">Summary</span></h4>
-    </div>
-  
-    <div class="white-rectangle">
-  <h5><img src="assets/images/icon-reaction.svg"><span style="color: hsl(0, 100%, 67%);">Reaction</span></h5>
-  <h6><span style="color: hsl(224, 30%, 27%);">80</span> / <span style="color: hsl(241, 100%, 89%);">100</span></h6>
-    </div>
-
-    <div class="white-rectangle">
-  <h5><img src="assets/images/icon-memory.svg"><span style="color: hsl(39, 100%, 56%);">Memory</span></h5>
-  <h6><span style="color: hsl(224, 30%, 27%);">92</span> / <span style="color: hsl(241, 100%, 89%);">100</span></h6>
-    </div>
-
-    <div class="white-rectangle">
-  <h5><img src="assets/images/icon-verbal.svg"><span style="color: hsl(166, 100%, 37%);">Verbal</span></h5>
-  <h6><span style="color: hsl(224, 30%, 27%);">61</span> / <span style="color: hsl(241, 100%, 89%);">100</span></h6>
-    </div>
-
-    <div class="white-rectangle">
-  <h5><img src="assets/images/icon-visual.svg"><span style="color: hsl(234, 85%, 45%);">Visual</span></h5>
-  <h6><span style="color: hsl(224, 30%, 27%);">72</span> / <span style="color: hsl(241, 100%, 89%);">100</span></h6>
-    </div>
-  <button class="button">Continue</button>
+  <div class="grid-flow1">
+  <p class="result-rank"><span style="color: hsl(0, 0%, 100%);">Great</span></p>
+  <p><span style="color: hsl(0, 0%, 100%);">You scored higher than 65% of the people who have taken these tests.</span></p>
   </div>
+  </div>
+</div>
+<div class="white-square">
+    <div class="summary grid-flow" data-spacing="large">
+      <h2 class="section-title2">
+        <span style="color: hsl(224, 30%, 27%);">Summary</span>
+      </h2>
+
+      <div class="grid-flow2">
+
+        <div class="summary-item">
+
+          <div class="flex-group">
+            <h3 class="summary-item"><img src="assets/images/icon-reaction.svg"><span style="color: hsl(0, 100%, 67%);">Reaction</span></h3>
+            <h3 class="summary-item"><img src="assets/images/icon-memory.svg"><span style="color: hsl(39, 100%, 56%);">Memory</span></h3>
+            <h3 class="summary-item"><img src="assets/images/icon-verbal.svg"><span style="color: hsl(166, 100%, 37%);">Verbal</span></h3>
+            <h3 class="summary-item"><img src="assets/images/icon-visual.svg"><span style="color: hsl(234, 85%, 45%);">Visual</span></h3>
+          </div>
+
+          <p class="summary-score">
+            <h3 class="score-item"><span style="color: hsl(224, 30%, 27%);">80</span> / 100</h3>
+            <h3 class="score-item"><span style="color: hsl(224, 30%, 27%);">92</span> / 100</h3>
+            <h3 class="score-item"><span style="color: hsl(224, 30%, 27%);">61</span> / 100</h3> 
+            <h3 class="score-item"><span style="color: hsl(224, 30%, 27%);">72</span> / 100</h3> 
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  <button class="button"><span style="color: hsl(0, 0%, 100%);">Continue</span></button>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -145,213 +199,6 @@
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
