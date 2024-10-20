@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="rel="style.css">
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,7 +17,7 @@
       background-color: hsl(0, 0%, 100%);
       place-items: center; 
     }
-    .results grid-flow, .grid-flow {
+    ./*results grid-flow, .grid-flow {
       height: 956px; 
       width: 956px; 
       border-radius: 24px;
@@ -37,7 +37,7 @@
       margin-bottom: 550px; 
       margin-left: 245px; 
       margin-top: -416px; 
-    }
+    }*/
     h1 {
       text-align: center; 
       color: hsla(256, 72%, 46%, 1); 
@@ -47,7 +47,7 @@
       border-radius: 50%; 
       height: 266px; 
       width: 545px; 
-      margin-top: -5555px; 
+      margin-top: 10px; 
       color: var(--clr-neutral-100); 
       line-height: 1; 
       background: hsl(224, 30%, 27%); 
@@ -55,14 +55,16 @@
       border: 0; 
       border-radius: 100vw; 
       cursor: pointer; 
-      margin-bottom: 55px; 
+      margin-bottom: 10px; 
     }
     .result-score {  /* this is the background purple circle */
       background: hsl(241, 44%, 51%); 
-      width: 500px; 
-      height: 500px; 
+      width: 650px; 
+      height: 650px; 
       border-radius: 50%; 
-      margin-left: 300px; 
+      margin-left: 3px; 
+      position: relative; 
+      left: 116px; 
     }
     h3 {
       font-size: 18px; 
@@ -85,24 +87,38 @@
       text-align: center; 
       font-weight: 800;
       margin-bottom: 12px; 
+      position: relative; 
+      top: 116px; 
+      right: 90px; 
     }
     .number-100 {
       font-size: 20px; 
       margin-top: -450px; 
       margin-left: 500px; 
       margin-bottom: 55px; 
+      position: relative; 
+      left: -255px; 
     }
     .purple-square { 
-      background-color: hsla(256, 72%, 46%, 1);   
+      background-color: hsla(256, 72%, 46%, 1);  
+      float: left;  
     } 
     .white-square { 
       background-color: hsl(0, 0%, 100%); 
+      float: right; 
+      position: relative; 
+      left: 255px; 
+      bottom: 955px; 
     } 
     .purple-square, .white-square {
-      height: 2016px; 
-      width: 2016px; 
       border-radius: 24px; 
-      padding: 24px; 
+      padding: 20px; 
+      display: grid; 
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      text-align: center;
+      box-sizing: border-box; 
+      height: 960px; 
+      width: 960px; 
     }
     .flex-group {
       float: left; 
@@ -111,22 +127,23 @@
       float: right; 
       display: block; 
     }
-    .button:hover, .button:focus-visible {
+    /*.button:hover, .button:focus-visible {
       background: var(--gradient-primary); 
-    }
+    }*/
     .section-title1 {
       background-color: hsl(252, 100%, 67%);
       color: hsl(0, 0%, 100%); 
     } 
-    .summary grid-flow {
+    /*.summary grid-flow {
       background-color: hsl(0, 0%, 100%); 
       color: hsl(0, 0%, 100%); 
-    }
+    }*/
     .section-title2 {
       background-color: hsl(0, 0%, 100%); 
       color: hsl(0, 0%, 100%); 
+      position: relative;  
     }
-    .grid-flow2, .summary-item, summary-score, flex-group, summary-item {
+   /* .grid-flow2, .summary-item, summary-score, flex-group, summary-item {
       background-color: hsl(0, 0%, 100%); 
     }
     .results grid-flow[data-spacing="large"] {
@@ -136,40 +153,31 @@
       display: grid; 
       align-content: start; 
       gap: 1rem;  
-    }
+    }*/
     .section-title1, .section-title2 { 
       font-weight: var(--fw-bold); 
       font-size: var(--fs-600); 
     } 
     .result-rank {
       margin-left: 245px; 
+      position: relative; 
+      right: 155px; 
     }
   </style>
 </head>
 <body>
   <div class="purple-square">
-    <div class="results grid-flow" data-spacing="large">
-    <h1 class="section-title1">
-      Your Result
-    </h1>
+    <h1 class="section-title1">Your Result</h1>
 
     <p class="result-score">
       <span style="color: hsl(0, 0%, 100%);" class="number76-100">76</span></p><p class="number-100"><span style="color: hsl(0, 0%, 100%);">of 100</span></p>
-  </div>
-  <div class="grid-flow1">
+
   <p class="result-rank"><span style="color: hsl(0, 0%, 100%);">Great</span></p>
   <p><span style="color: hsl(0, 0%, 100%);">You scored higher than 65% of the people who have taken these tests.</span></p>
   </div>
-  </div>
-</div>
+ 
 <div class="white-square">
-    <div class="summary grid-flow" data-spacing="large">
-      <h2 class="section-title2">
-        <span style="color: hsl(224, 30%, 27%);">Summary</span>
-      </h2>
-
-      <div class="grid-flow2">
-
+      <h2 class="section-title2"><span style="color: hsl(224, 30%, 27%);">Summary</span></h2>
         <div class="summary-item">
 
           <div class="flex-group">
@@ -186,11 +194,6 @@
             <h3 class="score-item"><span style="color: hsl(224, 30%, 27%);">72</span> / 100</h3> 
           </p>
         </div>
-
-      </div>
-
-    </div>
-
   <button class="button"><span style="color: hsl(0, 0%, 100%);">Continue</span></button>
   </div>
   <div class="attribution">
@@ -199,6 +202,11 @@
   </div>
 </body>
 </html>
+
+
+
+
+
 
 
 
